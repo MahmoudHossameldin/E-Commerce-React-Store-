@@ -100,7 +100,9 @@ const CheckoutForm = () => {
         <article>
           <h4>Hello, {myUser && myUser.name}</h4>
           <p>Your total is {formatPrice(total_amount)}</p>
-          <p>Test Card Number: 4242 4242 4242 4242</p>
+          <p className='tuned'>
+            WE ARE STILL WORKING ON THE STRIPE INTEGRATION, STAY TUNED!
+          </p>
         </article>
       )}
       <form id='payment-form' onSubmit={handleSubmit}>
@@ -173,6 +175,9 @@ const Wrapper = styled.section`
     color: rgb(89, 111, 214);
     font-weight: 600;
     text-decoration: none;
+  }
+  .tuned {
+    color: red;
   }
   .hidden {
     display: none;
